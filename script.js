@@ -4,7 +4,8 @@
  * is being asked, and counting the number of equations with at least one error.
  * FLOWCHART: https://lucid.app/lucidchart/5a3164fd-459f-494d-9cae-b4a6be593b13/view
  */
-main()
+main();
+
 function main() {
     let score = askFive();
     if (score == 0) alert("Perfect!");
@@ -46,11 +47,3 @@ function askQuestion(question){
         return 1;   
     } 
 }
-
-/* STAGE 3: MULTIPLE TRIES (CHALLENGE!) */
-
-/* Refactor askQuestion per whileQuestions askFive calls askQuestion five times, counting and returning number wrong
- * Use the whileQuestions tab in the flowchart to guide you. 
- * @param: none
- * @return: score (0-5)
- */
