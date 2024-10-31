@@ -4,19 +4,8 @@
  * is being asked, and counting the number of equations with at least one error.
  * FLOWCHART: https://lucid.app/lucidchart/5a3164fd-459f-494d-9cae-b4a6be593b13/view
  */
-main()
+main();
 
-/* Setup */
-// Define a function called main and then call it up top.
-// Define a function called askFive and call it from inside main().
-// Define a function called askQuestion and call it from inside askFive() as askQuestion(1);
-
-
-/* main calls askFive, stores return value in score.
- * Provides overall feedback based on score: perfect or number of errors.
- * @param: none
- * @return: none
- */
 function main() {
     let score = askFive();
     if (score == 0) alert("Perfect!");
@@ -59,6 +48,13 @@ function askQuestion(question){
     } 
 }
 
+// Create a variable score, set to 0
+// Write a for loop with question as the index, values 1 to 5
+// Call askQuestion in the loop, with question as argument
+// Add the returned value of askQuestion to score each time you call it (same line)
+// return score after loop finishes
+
+/* TEST BEFORE CONTINUING TO STAGE THREE! */
 
 /* STAGE 3: MULTIPLE TRIES (CHALLENGE!) */
 
