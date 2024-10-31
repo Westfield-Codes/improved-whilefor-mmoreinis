@@ -17,11 +17,11 @@ function main() {
  * @return: score (0-5)
  */
 function askFive() {
-    let score = 0;
+    let wrong = 0;
     for (let question = 1; question <= 5; question++) {
-        score += askQuestion(question);
+        wrong += askQuestion(question);
     }
-    return score;
+    return wrong;
 }
 
 /* askQuestion asks a multiplication question, returns 1 if incorrect
@@ -47,13 +47,3 @@ function askQuestion(question){
         return 1;   
     } 
 }
-
-// Create a variable score, set to 0
-// Write a for loop with question as the index, values 1 to 5
-// Call askQuestion in the loop, with question as argument
-// Add the returned value of askQuestion to score each time you call it (same line)
-// return score after loop finishes
-
-/* TEST BEFORE CONTINUING TO STAGE THREE! */
-
-/* STAGE 3: MULTIPLE TRIES (CHALLENGE!) */
