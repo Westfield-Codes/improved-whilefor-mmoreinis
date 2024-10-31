@@ -27,25 +27,25 @@ function askFive() {
  * @param: question (integer 1-5)
  * @return: integer (0 or 1)
  */
-function askQuestion(question){
-    let a = Math.floor(Math.random()*7)+3;
-    let b = Math.floor(Math.random()*7)+3;
-    let product = a*b;
-    let equation = a + " * " + b + " = ?";
-    let answer = prompt(equation);
-    if (answer == "q"){
-        alert("Quitter!");
-        return 2;
-    }
-    else if (answer == product){
-       alert("Correct!");
-       return 0;
-    } 
-    else {
-        alert("incorrect");
-        return 1;   
-    } 
-}
+// function askQuestion(question){
+//     let a = Math.floor(Math.random()*7)+3;
+//     let b = Math.floor(Math.random()*7)+3;
+//     let product = a*b;
+//     let equation = a + " * " + b + " = ?";
+//     let answer = prompt(equation);
+//     if (answer == "q"){
+//         alert("Quitter!");
+//         return 2;
+//     }
+//     else if (answer == product){
+//        alert("Correct!");
+//        return 0;
+//     } 
+//     else {
+//         alert("incorrect");
+//         return 1;   
+//     } 
+// }
 
 /* STAGE 3: MULTIPLE TRIES (CHALLENGE!) */
 
@@ -54,3 +54,25 @@ function askQuestion(question){
  * @param: none
  * @return: score (0-5)
  */
+
+function askQuestion(question){
+    let a = Math.floor(Math.random()*7)+3;
+    let b = Math.floor(Math.random()*7)+3;
+    let product = a*b;
+    let equation = a + " * " + b + " = ?";
+    let answer = 0;
+    let wrong = 0;
+    while (answer != product && answer != "q"){
+        answer = prompt(equation);
+        if (answer == "q"){
+            alert("Quitter!");
+            wrong = 2;
+        }
+        else if (answer == product) alert("Correct!");
+        else {
+            alert("Incorrect. Try again!");
+            wrong = 1;   
+        } 
+    }
+    return wrong;
+}
